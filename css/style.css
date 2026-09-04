@@ -1,0 +1,218 @@
+:root {
+    --color-principal: #2c6e49;
+    --color-secundario: #4c956c;
+    --color-fondo: #fefee3;
+    --color-texto: #333;
+    --color-tarjeta: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0 0 15px 0;
+    font-size: 2.2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--color-secundario);
+}
+
+nav a.activo {
+    background-color: var(--color-secundario);
+    font-weight: bold;
+    border-bottom: 2px solid #ffc9b9;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+
+h2 {
+    color: var(--color-principal);
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.boton:hover {
+    background-color: #3b7a57;
+    transform: translateY(-2px);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    background-color: var(--color-tarjeta);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+label {
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 5px rgba(76, 149, 108, 0.5);
+}
+
+button[type="submit"] {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e4d33;
+}
+
+.error {
+    color: #e63946;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.tarjeta-servicio {
+    background-color: var(--color-tarjeta);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.tarjeta-servicio figure {
+    margin: 0;
+    background-color: #f1f5f9;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid var(--color-secundario);
+}
+
+.img-placeholder {
+    font-size: 4rem;
+}
+
+.tarjeta-contenido {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tarjeta-contenido h3 {
+    margin: 0 0 10px 0;
+    color: var(--color-principal);
+    font-size: 1.4rem;
+}
+
+.tarjeta-contenido p {
+    flex-grow: 1;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #2c6e49;
+    margin-bottom: 15px;
+    display: block;
+    background-color: #e8f5e9;
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: white;
+    margin-top: auto; /* Empuja el footer al final */
+}
